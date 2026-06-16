@@ -1,0 +1,247 @@
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #2c3e50 0%, #121212 100%);
+  color: #ecf0f1;
+  min-height: 100vh;
+  border-radius: 10px;
+}
+
+.app h1 {
+  text-align: center;
+  color: #ecf0f1;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0;
+}
+
+.student-form {
+  background: #1f2933;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  animation: slideIn 0.5s ease-out;
+}
+
+.student-form h2 {
+  margin-top: 0;
+  color: #7dd3fc;
+  border-bottom: 3px solid #7dd3fc;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.student-form input {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 10px;
+  border: 2px solid #2e3a48;
+  border-radius: 6px;
+  background: #121d26;
+  color: #e2e8f0;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.student-form input:focus {
+  outline: none;
+  border-color: #5eead4;
+  box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.15);
+  transform: translateY(-2px);
+}
+
+.student-form button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+
+.student-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
+}
+
+.student-form button:active {
+  transform: translateY(-1px);
+}
+
+.student-list {
+  background: #1f2933;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  animation: slideIn 0.5s ease-out 0.1s both;
+}
+
+.student-list h2 {
+  margin-top: 0;
+  color: #7dd3fc;
+  border-bottom: 3px solid #7dd3fc;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.student-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.student-list > p {
+  color: #94a3b8;
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+}
+
+.student-item {
+  background: #141a23;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid #0ea5e9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.4s ease-out;
+  gap: 10px;
+}
+
+.student-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+}
+
+.student-info {
+  flex: 1;
+}
+
+.student-item strong {
+  display: block;
+  font-size: 14px;
+  color: #e2e8f0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.student-info p {
+  margin: 2px 0;
+  color: #cbd5e1;
+  font-size: 12px;
+}
+
+.student-item button {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.student-item button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+}
+
+.student-item button:active {
+  transform: translateY(0);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  .app h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .student-form,
+  .student-list {
+    padding: 20px;
+  }
+
+  .student-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .student-item button {
+    width: 100%;
+  }
+
+  .student-form input {
+    padding: 10px 12px;
+  }
+
+  .student-form button {
+    padding: 10px;
+  }
+}
