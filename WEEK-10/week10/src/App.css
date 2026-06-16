@@ -1,0 +1,201 @@
+.app-shell {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #102a43;
+  min-height: 100vh;
+  padding: 32px 24px;
+}
+
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #627d98;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.4vw, 2.6rem);
+}
+
+.app-nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.app-nav a {
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.72);
+  color: #102a43;
+  border: 1px solid rgba(16, 42, 67, 0.12);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.app-nav a:hover {
+  transform: translateY(-1px);
+  background: #ffffff;
+}
+
+.app-main {
+  display: grid;
+  gap: 24px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(16, 42, 67, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(16, 42, 67, 0.09);
+  padding: 28px;
+}
+
+.card-center {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card-header h2,
+.card-header p {
+  margin: 0;
+}
+
+.card-header h2 {
+  margin-top: 8px;
+  font-size: 2rem;
+}
+
+.card-copy {
+  color: #334e68;
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+label {
+  display: grid;
+  gap: 10px;
+  font-weight: 600;
+  color: #102a43;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d9e2ec;
+  border-radius: 14px;
+  font-size: 1rem;
+  background: #f9fbfd;
+}
+
+input:focus {
+  outline: none;
+  border-color: #5c95ff;
+  box-shadow: 0 0 0 4px rgba(92, 149, 255, 0.16);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: #0f62fe;
+  color: white;
+  box-shadow: 0 16px 30px rgba(15, 98, 254, 0.14);
+}
+
+.button-secondary {
+  background: #f0f4ff;
+  color: #102a43;
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.stats-card {
+  display: grid;
+  gap: 20px;
+}
+
+.stat-row {
+  display: grid;
+  gap: 12px;
+}
+
+.stat-value {
+  font-size: 3rem;
+  margin: 0;
+  color: #0f62fe;
+}
+
+.stat-label {
+  margin: 0;
+  color: #334e68;
+}
+
+.status-banner {
+  margin: 16px 0;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: #eff8ff;
+  color: #0f62fe;
+  font-weight: 700;
+}
+
+.book-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(16, 42, 67, 0.08);
+  background: #ffffff;
+}
+
+.book-item h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+@media (min-width: 840px) {
+  .dashboard-grid {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
